@@ -7,7 +7,6 @@ expect.extend(matchers);
 
 afterEach(() => {
   cleanup();
-  server.resetHandlers();
 });
 
 beforeAll(() => {
@@ -16,4 +15,8 @@ beforeAll(() => {
 
 afterAll(() => {
   server.close();
+});
+
+afterEach(() => {
+  server.resetHandlers();
 });
